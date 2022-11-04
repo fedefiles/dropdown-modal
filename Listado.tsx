@@ -40,13 +40,11 @@ const userlist = [
   }
 ]
 
-const logo = () => {<Image src={avatar}/>
-};
-
 const avatar="https://picsum.photos/200/200?random=1";
 
 const Listado = () => {
   const listitems = userlist.map((item) => <li key={item.id}>
+    <img src={avatar} height={50} width={50}/>
   {item.name}
   {item.street}
   {item.suite}
@@ -56,13 +54,12 @@ const Listado = () => {
   return(
     <div>
     <h1>User Information</h1>
-    <div>
-    <logo/>
-    </div>
+    
     <ul>
-   
-    </ul>
+      
     {listitems}
+    </ul>
+   
     </div>
   )
 
